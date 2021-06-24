@@ -1,0 +1,15 @@
+name: second_checkpoint
+config_version:
+module_name: great_expectations.checkpoint
+class_name: LegacyCheckpoint
+validation_operator_name:
+batches:
+  - batch_kwargs:
+      reader_options:
+        sep: '|'
+        header: 0
+      path: /Users/cmosley/git/validate-verticals/great_expectations/../test_data/gil-verticals.csv
+      datasource: test_data__dir
+      data_asset_name: gil-verticals
+    expectation_suite_names:
+      - verticals

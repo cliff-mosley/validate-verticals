@@ -1,0 +1,118 @@
+{
+  "data_asset_type": "Dataset",
+  "expectation_suite_name": "verticals",
+  "expectations": [
+    {
+      "expectation_type": "expect_table_columns_to_match_ordered_list",
+      "kwargs": {
+        "column_list": [
+          "platform_account",
+          "Master_ID",
+          "Master_Name",
+          "Vertical",
+          "D",
+          "new_sdate",
+          "new_edate",
+          "Customer_Tier",
+          "Support Tier"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_table_row_count_to_be_between",
+      "kwargs": {
+        "min_value": 164148
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "D",
+        "value_set": [
+          "S1",
+          "SD"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "D"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_type_list",
+      "kwargs": {
+        "column": "D",
+        "type_list": [
+          "CHAR",
+          "NCHAR",
+          "VARCHAR",
+          "NVARCHAR",
+          "TEXT",
+          "NTEXT",
+          "STRING",
+          "StringType",
+          "string",
+          "str",
+          "object",
+          "dtype('O')"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_match_regex",
+      "kwargs": {
+        "column": "new_sdate",
+        "regex": "\\d{2}/\\d{2}/\\d{4}"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_match_regex",
+      "kwargs": {
+        "column": "new_edate",
+        "regex": "\\d{2}/\\d{2}/\\d{4}"
+      },
+      "meta": {}
+    }
+
+  ],
+  "meta": {
+    "columns": {
+      "Customer_Tier": {
+        "description": ""
+      },
+      "D": {
+        "description": ""
+      },
+      "Master_ID": {
+        "description": ""
+      },
+      "Master_Name": {
+        "description": ""
+      },
+      "Support Tier": {
+        "description": ""
+      },
+      "Vertical": {
+        "description": ""
+      },
+      "new_edate": {
+        "description": ""
+      },
+      "new_sdate": {
+        "description": ""
+      },
+      "platform_account": {
+        "description": ""
+      }
+    },
+    "great_expectations_version": "0.13.20"
+  }
+}
